@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global IT</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        {{#each data}}
+            <div class="col-md-6 col-lg-4 article" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}" >
+                <ul class="list-param">
+                    <li class="name">{{this.name}}</li>
+                    <li class="phone">{{this.phone}}</li>
+                    <li class="mail"><a href="mailto:{{this.email}}">{{this.email}}</a></li>
+                </ul>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+    {{#each data}}
+    <div class="modal fade" id="modal-{{@index}}" tabindex="-1" aria-labelledby="modal-{{@index}}" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row">
+                    <h2>{{this.name}}</h2>
+                    <div class="col-6">
+                        <ul class="list-popup">
+                            <li class="phone-popup"> <p>Телефон:</p></li>
+                            <li class="mail-popup"> <p>Почта:</p></li>
+                            <li class="date-popup"> <p>Дата приема:</p></li>
+                            <li class="position-popup"> <p>Должность:</p></li>
+                            <li class="department-popup"> <p>Подразделение:</p></li>
+                            <li class="address-popup"><p>Дополнительная информация:</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-popup-info">
+                            <li class="phone-popup"> <p>{{this.phone}}</p></li>
+                            <li class="mail-popup"> <p>{{this.email}}</p></li>
+                            <li class="date-popup"> <p>{{this.hire_date}}</p></li>
+                            <li class="position-popup"> <p>{{this.position_name}}</p></li>
+                            <li class="department-popup"> <p>{{this.department}}</p></li>
+                            <li class="address-popup"> <p>{{this.address}}</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+</body>
+</html>

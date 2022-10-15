@@ -1,0 +1,109 @@
+.name, .phone, .mail {
+    font-size: 'Arial', 'Helvetica', sans-serif;
+}
+
+.name {
+    font-size: 28px;
+    margin-bottom: 5%;
+    font-weight: bolder;
+}
+
+.phone, .mail {
+    font-size: 16px;
+    margin-left: 6%;
+    color: grey;
+}
+
+.mail a {
+    color: gray;
+}
+
+.list-param, .list-popup, .list-popup-info {
+    list-style-type: none;
+    position: relative;
+}
+
+.list-param .phone:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("/public/img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 25px;
+    top: 55%;
+    left: 7%;
+    position: absolute;
+
+}
+
+.list-param .mail:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("/public/img/mail.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 25px;
+    top: 78%;
+    left: 7%;
+    position: absolute;
+}
+
+.article {
+    padding: 5% 2% 10% 5%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.10);
+    margin: 2%;
+    transition: box-shadow 0.5s ease-out;
+}
+
+.article:hover {
+    box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.25);
+}
+
+.list-popup li {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.list-popup li:last-child {
+    padding-bottom: 0px;
+}
+
+.list-popup-info li {
+    font-size: 16px;
+    font-weight: 300;
+    color: gray; 
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.list-popup-info li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-body h2 {
+    margin-bottom: 5%;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-body .btn-close {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    background-color: rgb(192, 59, 192);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 20px;
+    opacity: 1;
+}
