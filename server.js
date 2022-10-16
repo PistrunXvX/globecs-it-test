@@ -17,35 +17,17 @@ fastify.register(require('fastify-static'), {
 
 fastify.get('/', async (request, reply) => {
 	jsonArray = fs.readFileSync('./users.json', 'utf8');
-	data = JSON.parse(jsonArray);
-	console.log(data);
+	if(request.query.term) {
+		data = JSON.parse(jsonArray).filter((elem)=> elem.name.toLowerCase().search(request.query.term.toLowerCase()) !== -1);
+	} else {
+		data = JSON.parse(jsonArray);
+	}
 	reply.view("index.hbs", {data: data});
-	// 	if (err) {
-	// 		console.log('File read failed:', err);
-	// 		return;
-	// 	}
-		
-		// if(request.query.term)
-		// {
-		// 	const result = JSON.parse(data).filter((elem)=> elem.name.toLowerCase().search(request.query.term.toLowerCase()) !== -1);
-		// 	reply.send("xui");
-		// }
-	// 	else
-	// 	{
-	// 		reply.send(data);
-	// 	}
-
-	// })
 });
-
-// fastify.get('/index', (request, reply) => {
-// 	console.log(data);
-// 	reply.view("index.hbs", {data: JSON.stringify(data)});
-// });
 
 const start = async () => {
   try {
-    await fastify.listen(3001)
+    await fastify.listen(3000)
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);

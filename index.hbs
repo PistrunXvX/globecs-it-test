@@ -11,6 +11,13 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col">
+                <form class="search" action="/" method="get">
+                    <input class="user" type="text" name="term">
+                </form>
+            </div>
+        </div>
+        <div class="row">
         {{#each data}}
             <div class="col-md-6 col-lg-4 article" data-bs-toggle="modal" data-bs-target="#modal-{{@index}}" >
                 <ul class="list-param">
@@ -42,8 +49,8 @@
                     </div>
                     <div class="col-6">
                         <ul class="list-popup-info">
-                            <li class="phone-popup"> <p>{{this.phone}}</p></li>
-                            <li class="mail-popup"> <p>{{this.email}}</p></li>
+                            <li class="phone-popup"> <a href="tel:{{this.phone}}"><p>{{this.phone}}</p></a></li>
+                            <li class="mail-popup"> <a href="mailto:{{this.email}}"><p>{{this.email}}</p></a></li>
                             <li class="date-popup"> <p>{{this.hire_date}}</p></li>
                             <li class="position-popup"> <p>{{this.position_name}}</p></li>
                             <li class="department-popup"> <p>{{this.department}}</p></li>
