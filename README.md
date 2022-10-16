@@ -13,4 +13,14 @@
 - `npm install`
 - `npm start`
 
- По адресу *http://127.0.0.1:3000*
+ По адресу http://127.0.0.1:3000
+
+ ## Стек
+
+ - fastify
+ - fastify-static
+ - POV (point-of-view)
+ - handlebars
+ - bootstrap5
+
+ 
