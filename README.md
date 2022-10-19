@@ -1,21 +1,21 @@
 # globecs-it-test
-Тестовое задание для "Глобэкс Айти"
+Test task for the company "Globex IT"
 
-## Задача
+## Tasks
 
-- Сверстать по макету отчет. В отчете вывести список юзеров
-- На странице есть поиск по юзерам. При вводе в строке поиска список фильтруется
-- При клике по карточке выводить в pop-up дополнительную информацию по юзеру. При нажатии вне окна с информацией или крестик окно закрывается
-- Список юзеров получаем с бэкенда. Для этого нужно установить  и запустить локально сервер. Ссылка будет такой *http://127.0.0.1:3000*. Для получения всего списка отправляем запрос без параметров, для получения совпадений ФИО со строкой ввода добавляем параметры query (term), например *http://127.0.0.1:3000?term=fer*
+- Draft a report according to the layout. Display a list of users in the report
+- On the page there is a search by users. When you type in the search bar, the list is filtered
+- When clicking on the card, display additional information on the user in the pop-up. When you click outside the information window or the cross, the window closes
+- We get the list of users from the backend. To do this, you need to install and run the server locally. The link will be *http://127.0.0.1:3000*. To get the entire list, send a request without parameters, to get matches of the full name with the input string, add the query (term) parameters, for example *http://127.0.0.1:3000?term=fer*
 
-## Запуск проекта
+## Start project
 
 - `npm install`
 - `npm start`
 
- По адресу http://127.0.0.1:3000
+ By the address http://127.0.0.1:3000
 
- ## Стек
+ ## Stack
 
  - fastify
  - fastify-static
